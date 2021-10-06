@@ -6,11 +6,13 @@ import org.springframework.stereotype.Service;
 
 import dtos.DisciplinaDtos;
 import entidades.Disciplina;
-import excecoes.DisciplinaNaoEncontradaException;
+import excecoes.*;
 import dtos.AtualizacaoDisciplina;
+import repositorio.*;
 
 @Service
 public class DisciplinaServicos {
+	private static DisciplinaDAO disciplinas;
 
 	DadosDiciplina dadosdisc = new DadosDiciplina();
 	
